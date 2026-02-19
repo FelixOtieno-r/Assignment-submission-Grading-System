@@ -161,7 +161,7 @@ Once the server is running, visit `http://localhost:8000/docs` for tthe complete
 
 ------------------------------------------------------------------------
 ## Project Structure
-
+```
  assignment-system/
 ├── app/
 │   ├── __init__.py
@@ -188,7 +188,7 @@ Once the server is running, visit `http://localhost:8000/docs` for tthe complete
 ├── requirements.txt               # Python dependencies
 ├── README.md                      # Project documentation
 └── .gitignore                     # Git ignore rules
-
+```
 ------------------------------------------------------------------------
 
 ## Database Schema
