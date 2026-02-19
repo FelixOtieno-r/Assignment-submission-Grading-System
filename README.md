@@ -162,13 +162,32 @@ Once the server is running, visit `http://localhost:8000/docs` for tthe complete
 ------------------------------------------------------------------------
 ## Project Structure
 
-    assignment-system/
-    ├── app/
-    ├── tests/
-    ├── uploads/
-    ├── alembic/
-    ├── requirements.txt
-    ├── README.md
+ assignment-system/
+├── app/
+│   ├── __init__.py
+│   ├── main.py                 # FastAPI application entry point
+│   ├── config.py               # Environment variables & settings
+│   ├── database.py              # Database connection & session
+│   ├── models.py                # SQLAlchemy ORM models
+│   ├── schemas.py               # Pydantic schemas (request/response)
+│   ├── auth.py                  # JWT authentication & dependencies
+│   ├── routers/                 # API route handlers
+│   │   ├── auth.py
+│   │   ├── assignments.py
+│   │   ├── submissions.py
+│   │   └── dashboard.py
+│   ├── services/                # Business logic
+│   │   ├── file_storage.py      # File upload handling
+│   │   └── submission_status.py # On-time/late calculation
+│   └── utils/                   # Utility functions
+│       └── dependencies.py       # Role-based access control
+├── tests/                        # Pytest test suite
+├── uploads/                      # Local file storage directory
+├── alembic/                       # Database migrations
+├── .env                          # Environment variables
+├── requirements.txt               # Python dependencies
+├── README.md                      # Project documentation
+└── .gitignore                     # Git ignore rules
 
 ------------------------------------------------------------------------
 
